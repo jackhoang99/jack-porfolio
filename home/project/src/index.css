@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    cursor: none;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+  }
+
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: rgba(45, 212, 191, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.2s ease;
+  }
+
+  .custom-cursor.hovering {
+    transform: scale(1.5);
+  }
+
+  /* Dark mode styles */
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
