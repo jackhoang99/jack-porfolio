@@ -15,7 +15,8 @@ export function Logo() {
   }, []);
 
   return (
-    <motion.div 
+    <motion.a
+      href="#home"
       animate={{ 
         rotate: rotationDegrees,
       }}
@@ -25,15 +26,15 @@ export function Logo() {
         damping: 10
       }}
       whileHover={{ scale: 1.1 }}
-      className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 shadow-xl cursor-pointer"
+      className="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 shadow-xl cursor-pointer"
     >
       <motion.div
         className="w-full h-full flex items-center justify-center"
       >
-        <div className="font-display font-bold text-2xl text-white tracking-tight drop-shadow-md">
+        <div className="font-display font-bold text-xl md:text-2xl text-white tracking-tight drop-shadow-md">
           JH
         </div>
       </motion.div>
-    </motion.div>
+    </motion.a>
   );
 }

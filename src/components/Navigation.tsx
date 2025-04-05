@@ -43,9 +43,9 @@ export function Navigation({ darkMode }: { darkMode: boolean }) {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 1 }}
-      className="fixed right-4 md:right-8 top-[30%] z-50"
+      className="fixed right-4 md:right-8 top-[50%] transform -translate-y-1/2 z-50"
     >
-      <ul className="space-y-3 md:space-y-4">
+      <ul className="space-y-6 md:space-y-4">
         {navItems.map(({ id, label }) => (
           <li key={id}>
             <a
